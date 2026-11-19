@@ -10,6 +10,15 @@
 
 ## 中文
 
+### 下载即用
+
+不想装 Python？直接到 [Releases](https://github.com/jay6531/jay777/releases/latest) 下载：
+
+- **Windows**：`TXT摸鱼神器-windows-x64.exe`，双击即可运行
+- **macOS**：`TXT摸鱼神器-macOS.zip`，解压后双击 `.app`；首次打开若被系统拦截，右键点击 → 「打开」
+
+> macOS 包由 GitHub Actions 在 macOS 环境中构建并做了本地签名，未做 Apple 公证。若提示「无法验证开发者」，到「系统设置 → 隐私与安全性」点击「仍要打开」即可。
+
 ### 功能
 
 - **小窗口摸鱼**：默认窗口小巧、可随意缩放，窄到 300 多像素会自动收成紧凑工具栏
@@ -98,6 +107,10 @@ chmod +x build_mac.sh
 
 产物：`dist/TXT摸鱼神器.app`。若首次打开被 Gatekeeper 拦截，到「系统设置 → 隐私与安全性」点击「仍要打开」。
 
+**自动发布**
+
+发布 Release 时，`.github/workflows/build.yml` 会在 GitHub 的 Windows / macOS 构建机上自动打包，并把两个平台的产物附加到该 Release，无需本地构建。
+
 ### 目录结构
 
 ```
@@ -110,6 +123,8 @@ txt-moyu/
 │   └── sample-en.txt      # 英文示例
 ├── docs/
 │   └── screenshot.png     # 界面截图
+├── .github/workflows/
+│   └── build.yml          # Release 自动打包
 └── .gitignore
 ```
 
@@ -122,6 +137,15 @@ txt-moyu/
 A tiny desktop TXT novel reader. Native window, not a web page: a small always-on-top reading window that looks like work.
 
 Cross-platform: Windows and macOS. Pure Python + Tkinter, no third-party runtime dependencies.
+
+### Download & run
+
+No Python required — grab a build from [Releases](https://github.com/jay6531/jay777/releases/latest):
+
+- **Windows**: `TXT摸鱼神器-windows-x64.exe`, double-click to run
+- **macOS**: `TXT摸鱼神器-macOS.zip`, unzip and double-click the `.app`; if blocked on first launch, right-click → Open
+
+> The macOS build is produced on a macOS runner in GitHub Actions and ad-hoc signed, but not notarized by Apple. If Gatekeeper complains, allow it under System Settings → Privacy & Security → "Open Anyway".
 
 ### Features
 
@@ -204,6 +228,10 @@ chmod +x build_mac.sh
 
 Output: `dist/TXT摸鱼神器.app`. If Gatekeeper blocks the first launch, allow it under System Settings → Privacy & Security → "Open Anyway".
 
+**Automated releases**
+
+Publishing a GitHub Release triggers `.github/workflows/build.yml`, which builds both Windows and macOS packages on GitHub runners and attaches them to the release automatically.
+
 ### Repository layout
 
 ```
@@ -216,6 +244,8 @@ txt-moyu/
 │   └── sample-en.txt      # English sample
 ├── docs/
 │   └── screenshot.png     # screenshot
+├── .github/workflows/
+│   └── build.yml          # release automation
 └── .gitignore
 ```
 

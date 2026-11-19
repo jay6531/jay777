@@ -1,0 +1,13 @@
+# 忽略 Python 缓存与构建产物
+__pycache__/
+*.py[cod]
+*.spec
+build/
+dist/
+
+# 本地的书架与阅读进度，不上传
+reader_state.json
+
+# 系统文件
+.DS_Store
+Thumbs.db

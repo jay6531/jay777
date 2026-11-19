@@ -1,0 +1,5 @@
+* text=auto
+
+# macOS 构建脚本必须是 LF，否则 bash 会报错
+*.sh text eol=lf
+*.bat text eol=crlf

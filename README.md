@@ -14,8 +14,8 @@
 
 不想装 Python？直接到 [Releases](https://github.com/jay6531/jay777/releases/latest) 下载：
 
-- **Windows**：`TXT摸鱼神器-windows-x64.exe`，双击即可运行
-- **macOS**：`TXT摸鱼神器-macOS.zip`，解压后双击 `.app`；首次打开若被系统拦截，右键点击 → 「打开」
+- **Windows**：`TXT-Moyu-<版本>-windows-x64.exe`，双击即可运行
+- **macOS**：`TXT-Moyu-<版本>-macOS.zip`，解压后双击 `.app`；首次打开若被系统拦截，右键点击 → 「打开」
 
 > macOS 包由 GitHub Actions 在 macOS 环境中构建并做了本地签名，未做 Apple 公证。若提示「无法验证开发者」，到「系统设置 → 隐私与安全性」点击「仍要打开」即可。
 
@@ -142,8 +142,8 @@ Cross-platform: Windows and macOS. Pure Python + Tkinter, no third-party runtime
 
 No Python required — grab a build from [Releases](https://github.com/jay6531/jay777/releases/latest):
 
-- **Windows**: `TXT摸鱼神器-windows-x64.exe`, double-click to run
-- **macOS**: `TXT摸鱼神器-macOS.zip`, unzip and double-click the `.app`; if blocked on first launch, right-click → Open
+- **Windows**: `TXT-Moyu-<version>-windows-x64.exe`, double-click to run
+- **macOS**: `TXT-Moyu-<version>-macOS.zip`, unzip and double-click the `.app`; if blocked on first launch, right-click → Open
 
 > The macOS build is produced on a macOS runner in GitHub Actions and ad-hoc signed, but not notarized by Apple. If Gatekeeper complains, allow it under System Settings → Privacy & Security → "Open Anyway".
 

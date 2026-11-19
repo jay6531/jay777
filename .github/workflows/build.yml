@@ -21,11 +21,11 @@ jobs:
         run: python -m PyInstaller --noconfirm --onefile --windowed --name "TXT摸鱼神器" txt_moyu.py
       - name: Rename asset
         shell: pwsh
-        run: Copy-Item "dist\TXT摸鱼神器.exe" "dist\TXT摸鱼神器-windows-x64.exe"
+        run: Copy-Item "dist\TXT摸鱼神器.exe" "dist\TXT-Moyu-${{ github.event.release.tag_name }}-windows-x64.exe"
       - name: Upload to release
         uses: softprops/action-gh-release@v2
         with:
-          files: dist/TXT摸鱼神器-windows-x64.exe
+          files: dist/TXT-Moyu-*-windows-x64.exe
 
   macos:
     runs-on: macos-latest
@@ -41,8 +41,8 @@ jobs:
       - name: Sign and zip
         run: |
           codesign --force --deep --sign - "dist/TXT摸鱼神器.app"
-          ditto -c -k --keepParent "dist/TXT摸鱼神器.app" "dist/TXT摸鱼神器-macOS.zip"
+          ditto -c -k --keepParent "dist/TXT摸鱼神器.app" "dist/TXT-Moyu-${{ github.event.release.tag_name }}-macOS.zip"
       - name: Upload to release
         uses: softprops/action-gh-release@v2
         with:
-          files: dist/TXT摸鱼神器-macOS.zip
+          files: dist/TXT-Moyu-*-macOS.zip
